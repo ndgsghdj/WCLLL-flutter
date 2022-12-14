@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:WCLLL-flutter/homePage.dart';
+import 'package:login_page_and_home_page/loginPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -6,30 +8,25 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Login(),
-    );
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(primarySwatch: Colors.red),
+        home: const RootPage());
   }
 }
 
-class Login extends StatelessWidget {
-  const Login ({super.key});
+class RootPage extends StatefulWidget {
+  const RootPage({super.key});
 
   @override
+  State<RootPage> createState() => _RootPageState();
+}
+
+class _RootPageState extends State<RootPage> {
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Login'),
-        backgroundColor: const Color.fromRGBO(240, 128, 128, 100),
-      ),
-      body: const Center(
-        child: Text('Sign in screen', style: TextStyle(fontSize: 24)),
-      ),
-    );
+    return const Scaffold(body: LoginPage());
   }
 }
