@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:WCLLL-flutter/homePage.dart';
-import 'package:login_page_and_home_page/loginPage.dart';
+import 'package:wclll/homePage.dart';
+import 'package:wclll/loginPage.dart';
 
 void main() {
   runApp(const MyApp());

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:WCLLL-flutter/wclll/homePage.dart';
-import 'package:login_page_and_home_page/loginPage.dart';
-import 'package:login_page_and_home_page/profilePage.dart';
+import 'package:wclll/homePage.dart';
+import 'package:wclll/loginPage.dart';
+import 'package:wclll/profilePage.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
