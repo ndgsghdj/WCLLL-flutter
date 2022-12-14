@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:login_page_and_home_page/loginPage.dart';
+import 'package:wclll/loginPage.dart';
 // ignore: unused_import
-import 'package:login_page_and_home_page/profilePage.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
