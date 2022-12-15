@@ -126,41 +126,51 @@ class _LoginPageState extends State<LoginPage> {
                   )
                 ])),
           ]),
-          const Padding(padding: EdgeInsets.all(50.0)),
-          Container(
-            width: 330.0,
-            height: 50.0,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color.fromARGB(255, 248, 173, 157)),
-              child: const Text(
-                "LOGIN",
-                style: TextStyle(fontSize: 20),
-              ),
-              onPressed: () {
-                if (accounts.containsKey(userName)) {
-                  if (accounts[userName] == password) {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (BuildContext context) {
-                      return const MainPage();
-                    }));
+          Expanded(
+            flex: 3,
+            child: const Padding(padding: EdgeInsets.all(50.0)),
+          ),
+          Expanded(
+            child: Container(
+              width: 330.0,
+              height: 50.0,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color.fromARGB(255, 248, 173, 157)),
+                child: const Text(
+                  "LOGIN",
+                  style: TextStyle(fontSize: 20),
+                ),
+                onPressed: () {
+                  if (accounts.containsKey(userName)) {
+                    if (accounts[userName] == password) {
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (BuildContext context) {
+                        return const MainPage();
+                      }));
+                    } else {
+                      setState(() {
+                        errorMsg = "Password is incorrect";
+                      });
+                    }
                   } else {
                     setState(() {
-                      errorMsg = "Password is incorrect";
+                      errorMsg = "User does not exist";
                     });
                   }
-                } else {
-                  setState(() {
-                    errorMsg = "User does not exist";
-                  });
-                }
-              },
+                },
+              ),
             ),
           ),
-          const Padding(padding: EdgeInsets.all(50.0)),
-          Text(
-            errorMsg,
-            style: const TextStyle(fontSize: 15),
+          Expanded(
+            flex: 2,
+            child: const Padding(padding: EdgeInsets.all(50.0)),
+          ),
+          Expanded(
+            child: Text(
+              errorMsg,
+              style: const TextStyle(fontSize: 15),
+            ),
           )
         ],
       ),
