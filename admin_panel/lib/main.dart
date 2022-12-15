@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:admin_panel/home.dart';
 
 void main() {
   runApp(MyApp());
@@ -31,41 +32,38 @@ class LoginScreen extends StatelessWidget {
     );
 
     final password = TextFormField(
-        autofocus: false,
-        initialValue: '',
-        obscureText: true,
-        decoration: const InputDecoration(
-            hintText: 'Password',
-            contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0)));
-
-    final loginButton = Container(
-      width: MediaQuery.of(context).size.width / 2.5,
-      child: Theme(
-        data: ThemeData(
-          buttonTheme: ButtonThemeData(
-            colorScheme: ColorScheme.fromSwatch(
-              primarySwatch: Colors.blue,
-            ),
-          ),
-        ),
-        child: ElevatedButton(
-          onPressed: () {
-            // Navigator.push(
-            //   context,
-            //   MaterialPageRoute(builder: (context) => HomeScreen()),
-            // );
-          },
-          child: const Text(
-            "Log In",
-            style: TextStyle(
-              fontSize: 16,
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
+      autofocus: false,
+      initialValue: '',
+      obscureText: true,
+      decoration: const InputDecoration(
+        hintText: 'Password',
+        contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
       ),
     );
+
+    final loginButton = SizedBox(
+      width: MediaQuery.of(context).size.width / 2.5,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: const Color.fromARGB(255, 248, 128, 128),
+        ),
+        child: const Text(
+          "Login",
+          style: TextStyle(
+            fontSize: 16,
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => MyHomePage()),
+          );
+        },
+      ),
+    );
+
     final forgotLabel = TextButton(
       child: const Text(
         'Forgot password?',
@@ -79,9 +77,9 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Stack(
-        children: <Widget> [
+        children: <Widget>[
           Column(
-            children: <Widget> [
+            children: <Widget>[
               Container(
                 height: MediaQuery.of(context).size.height / 2,
                 width: MediaQuery.of(context).size.width / 2,
@@ -90,7 +88,7 @@ class LoginScreen extends StatelessWidget {
               Container(
                 height: MediaQuery.of(context).size.height / 2,
                 width: MediaQuery.of(context).size.width,
-                color: Colors.blue,
+                color: const Color.fromARGB(255, 248, 173, 157),
               ),
             ],
           ),
@@ -102,7 +100,7 @@ class LoginScreen extends StatelessWidget {
                 width: MediaQuery.of(context).size.width / 2.5,
                 height: MediaQuery.of(context).size.height / 1.5,
                 child: Column(
-                  children: <Widget> [
+                  children: <Widget>[
                     const SizedBox(height: 62.0),
                     const Center(
                       child: Text(
