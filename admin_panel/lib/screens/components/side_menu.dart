@@ -11,25 +11,32 @@ class Sidebar extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           DrawerHeader(
-            child: Text('Admin Panel'),
+            child: Image.asset("images/logo.png"),
+          ),
+          DrawerListTile(
+            title: 'Dashboard',
+            svgSrc: "icons/menu_dashbord.svg",
+            press: () {
+              // Handle button 1 tap
+            },
           ),
           DrawerListTile(
             title: 'Reports',
-            svgSrc: "assets/icons/Document.svg",
+            svgSrc: "icons/menu_doc.svg",
             press: () {
               // Handle button 1 tap
             },
           ),
           DrawerListTile(
             title: 'Cases',
-            svgSrc: "assets/icons/folder.svg",
+            svgSrc: "icons/menu_tran.svg",
             press: () {
               // Handle button 2 tap
             },
           ),
           DrawerListTile(
             title: 'Accounts',
-            svgSrc: "assets/icons/menu_profile.svg",
+            svgSrc: "icons/menu_profile.svg",
             press: () {
               // Handle button 3 tap
             },
