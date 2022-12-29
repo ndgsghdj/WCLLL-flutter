@@ -17,14 +17,15 @@ class Sidebar extends StatelessWidget {
             title: 'Dashboard',
             svgSrc: "icons/menu_dashbord.svg",
             press: () {
-              // Handle button 1 tap
+              Navigator.pushNamed(context, '/home');
             },
           ),
           DrawerListTile(
             title: 'Reports',
             svgSrc: "icons/menu_doc.svg",
             press: () {
-              // Handle button 1 tap
+              // Navigator.pushNamed(context, '/reports');
+              print("hello");
             },
           ),
           DrawerListTile(

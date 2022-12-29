@@ -2,7 +2,7 @@ import 'package:admin_panel/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:admin_panel/models/DashboardButton.dart';
 
-import '../../constants.dart';
+import '../../../constants.dart';
 import 'dashboard_button.dart';
 
 class DashboardButtonList extends StatelessWidget {

@@ -5,19 +5,13 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-// void main() {
-//   runApp(MyApp());
-// }
-
-class HomeMain extends StatelessWidget {
-  const HomeMain({super.key});
-
+class HomeProvider extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Grassroots Admin Panel',
+      title: 'Flutter Admin Panel',
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: bgColor,
         textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
@@ -30,7 +24,7 @@ class HomeMain extends StatelessWidget {
             create: (context) => MenuController(),
           ),
         ],
-        child: MainScreen(),
+        child: HomePage(),
       ),
     );
   }
