@@ -42,6 +42,7 @@ class _LoginPageState extends State<LoginPage> {
         title: const Text("LOGIN"),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const Padding(padding: EdgeInsets.all(70.0)),

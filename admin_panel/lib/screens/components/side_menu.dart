@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 
 class Sidebar extends StatelessWidget {
   const Sidebar({super.key});
@@ -17,15 +18,14 @@ class Sidebar extends StatelessWidget {
             title: 'Dashboard',
             svgSrc: "icons/menu_dashbord.svg",
             press: () {
-              Navigator.pushNamed(context, '/home');
+              context.push('/');
             },
           ),
           DrawerListTile(
             title: 'Reports',
             svgSrc: "icons/menu_doc.svg",
             press: () {
-              // Navigator.pushNamed(context, '/reports');
-              print("hello");
+              context.push('/reports');
             },
           ),
           DrawerListTile(

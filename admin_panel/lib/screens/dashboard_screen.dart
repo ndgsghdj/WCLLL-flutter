@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:admin_panel/responsive.dart';
-import '../../constants.dart';
+import '../constants/constants.dart';
 import 'components/legacy/header.dart';
 import 'package:admin_panel/screens/components/legacy/dashboard_button_list.dart';
 import 'components/legacy/case_button.dart';
@@ -27,7 +27,6 @@ class DashboardScreen extends StatelessWidget {
                     children: [
                       DashboardButtonList(),
                       SizedBox(height: defaultPadding),
-                      Case(),
                     ],
                   ),
                 ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:admin_panel/models/DashboardButton.dart';
-import '../../../constants.dart';
+import '../../../constants/constants.dart';
 
 class DashboardButton extends StatelessWidget {
   const DashboardButton({

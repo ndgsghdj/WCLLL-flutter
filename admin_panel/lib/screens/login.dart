@@ -1,6 +1,7 @@
 import 'package:admin_panel/main.dart';
 import 'package:admin_panel/screens/home.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -40,7 +41,7 @@ class LoginScreen extends StatelessWidget {
           ),
         ),
         onPressed: () {
-          Navigator.pushNamed(context, '/home');
+          context.push('/');
         },
       ),
     );

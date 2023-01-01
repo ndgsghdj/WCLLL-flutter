@@ -3,7 +3,7 @@ import 'package:admin_panel/models/case.dart';
 import 'package:data_table_2/data_table_2.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../constants.dart';
+import '../../../constants/constants.dart';
 
 class Case extends StatelessWidget {
   const Case({super.key});
@@ -20,7 +20,7 @@ class Case extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Recent Files",
+            "Recent Cases",
             style: Theme.of(context).textTheme.subtitle1,
           ),
           SizedBox(

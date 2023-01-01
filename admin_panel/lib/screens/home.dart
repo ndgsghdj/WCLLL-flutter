@@ -1,4 +1,3 @@
-import 'package:admin_panel/controller/MenuController.dart';
 import 'package:admin_panel/responsive.dart';
 import 'package:admin_panel/screens/dashboard_screen.dart';
 import 'package:admin_panel/screens/components/side_menu.dart';
@@ -14,7 +13,6 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: context.read<MenuController>().scaffoldKey,
       drawer: Sidebar(),
       body: SafeArea(
         child: Row(
