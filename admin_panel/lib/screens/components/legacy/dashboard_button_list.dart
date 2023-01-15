@@ -20,7 +20,7 @@ class DashboardButtonList extends StatelessWidget {
           children: [
             Text(
               "Looking for something?",
-              style: Theme.of(context).textTheme.subtitle1,
+              style: TextStyle(color: Colors.white),
             ),
           ],
         ),

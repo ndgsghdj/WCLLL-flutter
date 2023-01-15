@@ -21,19 +21,31 @@ class Case extends StatelessWidget {
         children: [
           Text(
             "Recent Cases",
-            style: Theme.of(context).textTheme.subtitle1,
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
           SizedBox(
             width: double.infinity,
-            child: DataTable2(
+            child: DataTable(
               columnSpacing: defaultPadding,
-              minWidth: 600,
               columns: [
                 DataColumn(
-                  label: Text("Resident"),
+                  label: Text(
+                    "Resident",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
-                DataColumn(label: Text("Date")),
-                DataColumn(label: Text("Progress"))
+                DataColumn(
+                  label: Text(
+                    "Date",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+                DataColumn(
+                  label: Text(
+                    "Progress",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                )
               ],
               rows: List.generate(
                 demoCases.length,
@@ -60,13 +72,22 @@ DataRow recentCasesRow(CaseInstance caseInfo) {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
-              child: Text(caseInfo.resident!),
+              child: Text(
+                caseInfo.resident!,
+                style: TextStyle(color: Colors.white),
+              ),
             ),
           ],
         ),
       ),
-      DataCell(Text(caseInfo.date!)),
-      DataCell(Text(caseInfo.progress!))
+      DataCell(Text(
+        caseInfo.date!,
+        style: TextStyle(color: Colors.white),
+      )),
+      DataCell(Text(
+        caseInfo.progress!,
+        style: TextStyle(color: Colors.white),
+      ))
     ],
   );
 }

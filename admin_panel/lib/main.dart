@@ -27,15 +27,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routeInformationParser: AppRouter().router.routeInformationParser,
       routerDelegate: AppRouter().router.routerDelegate,
-      // routes: {
-      //   '/login': (context) => LoginScreen(),
-      //   '/home': (context) => HomeProvider(),
-      //   '/dashboard': (context) => DashboardScreen(),
-      //   '/reports': (context) => ReportsPage(),
-      //   '/cases': (context) => CasesPage(),
-      //   '/accounts': (context) => AccountsPage(),
-      // },
-
+      theme: ThemeData(
+        textTheme: TextTheme(headline6: TextStyle(color: Colors.white)),
+      ),
     );
   }
 }

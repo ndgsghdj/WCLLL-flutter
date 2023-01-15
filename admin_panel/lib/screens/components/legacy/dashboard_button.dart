@@ -14,6 +14,7 @@ class DashboardButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
+      textStyle: TextStyle(color: Colors.white),
       borderRadius: const BorderRadius.all(Radius.circular(10)),
       child: InkWell(
         child: Container(
