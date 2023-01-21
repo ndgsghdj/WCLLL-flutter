@@ -4,7 +4,8 @@ import 'package:wclll/loginPage.dart';
 import 'package:wclll/profilePage.dart';
 
 class MainPage extends StatefulWidget {
-  const MainPage({super.key});
+  MainPage({super.key, required this.username});
+  String username;
 
   @override
   State<MainPage> createState() => _MainPageState();
@@ -14,11 +15,20 @@ class _MainPageState extends State<MainPage> {
   @override
   // ignore: override_on_non_overriding_member
   int currPage = 0;
-  List<Widget> pages = [
-    const HomePage(),
-    const ProfilePage(),
-    const LoginPage()
-  ];
+  List<Widget> pages = [const ProfilePage(), const LoginPage()];
+
+  @override
+  void initState() {
+    super.initState();
+    setState(() {
+      pages = [
+        HomePage(username: widget.username),
+        const ProfilePage(),
+        const LoginPage()
+      ];
+    });
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
         body: pages[currPage],

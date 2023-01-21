@@ -14,7 +14,7 @@ class _LoginPageState extends State<LoginPage> {
   // ignore: prefer_typing_uninitialized_variables
   String errorMsg = "";
   // ignore: prefer_typing_uninitialized_variables
-  var userName;
+  String userName = "";
   // ignore: prefer_typing_uninitialized_variables
   var password;
 
@@ -77,6 +77,7 @@ class _LoginPageState extends State<LoginPage> {
                     child: TextFormField(
                       onChanged: (val) {
                         _updateUser(val);
+
                       },
                       decoration: const InputDecoration(
                           filled: true,
@@ -144,7 +145,9 @@ class _LoginPageState extends State<LoginPage> {
                     if (accounts[userName] == password) {
                       Navigator.of(context).push(
                           MaterialPageRoute(builder: (BuildContext context) {
-                        return const MainPage();
+                        return MainPage(
+                          username: userName,
+                        );
                       }));
                     } else {
                       setState(() {
